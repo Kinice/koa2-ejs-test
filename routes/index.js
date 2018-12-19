@@ -1,9 +1,7 @@
-module.exports =  (router) => {
-  router.get('/welcome', async function (ctx, next) {
-    ctx.state = {
-      title: 'koa2 title'
-    };
+const pages = require('./pages')
+const api = require('./api')
 
-    await ctx.render('welcome', {title: ctx.state});
-  })
+module.exports = (router) => {
+  pages(router)
+  api(router)
 }

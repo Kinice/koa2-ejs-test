@@ -10,6 +10,7 @@ const json = require('koa-json')
 const onerror = require('koa-onerror')
 const bodyparser = require('koa-bodyparser')
 const logger = require('koa-logger')
+const static = require('koa-static')
 const debug = require('debug')('koa2:server')
 const path = require('path')
 
@@ -25,7 +26,7 @@ onerror(app)
 app.use(bodyparser())
   .use(json())
   .use(logger())
-  .use(require('koa-static')(__dirname + '/public'))
+  .use(static(__dirname + '/public'))
   .use(views(path.join(__dirname, '/views'), {
     options: {settings: {views: path.join(__dirname, 'views')}},
     map: {'njk': 'nunjucks'},
@@ -42,15 +43,14 @@ app.use(async (ctx, next) => {
   console.log(`${ctx.method} ${ctx.url} - $ms`)
 })
 
-router.get('/', async (ctx, next) => {
-  // ctx.body = 'Hello World'
-  ctx.state = {
-    title: 'Koa2'
-  }
-  await ctx.render('index', ctx.state)
+routes(router)
+
+// 404
+router.all('/*', async (ctx, next) => {
+  ctx.response.status = 404;
+  ctx.response.body = '<h1>404 Not Found</h1>';
 })
 
-routes(router)
 app.on('error', function(err, ctx) {
   console.log(err)
   logger.error('server error', err, ctx)
