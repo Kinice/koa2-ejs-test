@@ -1,8 +1,17 @@
 module.exports = {
   port: 12306,
   emailSender: {
-    user: 'sunzhaopeng@xiaoyezi.com',
-    pass: 'Ckhs9fwhhZoCzgg6',
-    name: '小叶子邮箱服务'
+    user: 'xxx@xxx.com',
+    pass: 'xxxxxxx',
+    name: '发件人名名'
+  },
+  database: {
+    type: 'mysql',
+    database: 'music_center',
+    host: '127.0.0.1',
+    username: 'root',
+    password: '123456',
+    prefix: 'front_',
+    port: '3306'
   }
 }
