@@ -25,10 +25,40 @@ class User extends Table{
     })
     super(user)
     this.user = user
+    this.schema = {
+      type: 'object',
+      required: ['name', 'mobile', 'school_id', 'age', 'ip'],
+      properties: {
+        name: {
+          type: 'string',
+          minLength: 1
+        },
+        mobile: {
+          type: 'number'
+        },
+        school_id: {
+          type: 'number'
+        },
+        age: {
+          type: 'number'
+        },
+        ip: {
+          type: 'string',
+          format: 'ipv4'
+        }
+      }
+    }
   }
 
-  sonFindAll(options) {
-    return this.user.findAll(options)
+  addOneUser(userInfo) {
+    let data = Object.assign({
+      name: '',
+      mobile: '',
+      school_id: '',
+      age: '',
+      ip: ''
+    }, userInfo)
+    return this.user.create(data)
   }
 }
 

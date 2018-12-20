@@ -11,5 +11,5 @@ module.exports = new Sequelize(config.database.database, config.database.usernam
     idle: 10000,
     acquire: 30000
   },
-  timestamps: false
+  // timestamps: false
 })
