@@ -1,0 +1,224 @@
+@import url(./reset.less);
+@import url(./header.less);
+@import url(./footer.less);
+@import url(./video-box.less);
+@import url(./fixed-bar.less);
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.bg-purple {
+  background-color: #763086;
+}
+.wrapper {
+  width: 100%;
+  min-width: 1506px;
+}
+.g-wrap {
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
+}
+.video-player {
+  z-index: 99999;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  bottom: 0;
+  background: #000;
+  .video-tag {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .close {
+    width: 30px;
+    height: 30px;
+    background: url('../../images/close-video.png') no-repeat center;
+    background-size: 30px;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+  }
+}
+.helper {
+  position: fixed;
+  top: 162px;
+  right: 0;
+  width: 96px;
+  height: 194px;
+  .helper-item {
+    background-color: #7e318e;
+    margin-bottom: 2px;
+    height: 96px;
+    width: 96px;
+    img {
+      margin-top: 16px;
+      margin-left: 23px;
+      width: 50px;
+      height: 50px;
+    }
+    p {
+      color: #fff;
+      margin-top: 5px;
+      margin-left: 21px;
+    }
+  }
+}
+.content-banner {
+  position: relative;
+  .form-box {
+    height: 354px;
+    width: 347px;
+    background-color: #fcfcfc;
+    position: absolute;
+    top: 25%;
+    right: 5%;
+    .form-content {
+      width: 218px;
+      height: 300px;
+      margin: 27px auto;
+      position: relative;
+      .captcha {
+        margin-top: 5px;
+      }
+      .form-pic {
+        position: absolute;
+        right: 1px;
+        border: 1px solid #e5e5e8;
+        border-left: none;
+        width: 32px;
+        height: 30px;
+        padding: 5px 1px 5px 9px;
+        &.pic-age {
+          top: 91px;
+        }
+        img {
+          width: 15px;
+          height: 15px;
+        }
+      }
+      #adult-mobile {
+        margin-top: 43px;
+      }
+      #get-captcha, #reset-captcha {
+        font-size: 13px;
+        float: right;
+        width: 93px;
+        height: 30px;
+        color: #fff;
+        background-color: #7e318e;
+        border-radius: 3px;
+      }
+      #submit {
+        font-size: 20px;
+        margin-top: 5px;
+        color: #fff;
+        width: 100%;
+        height: 45px;
+        background-color: #7e318e;
+      }
+      input {
+        margin-bottom: 10px;
+        padding-left: 5px;
+        width: 100%;
+        height: 30px;
+        border: 1px solid #e5e5e8;
+        &.with-icon {
+          width: 186px;
+        }
+        &.with-captcha {
+          width: 117px;
+        }
+      }
+      p {
+        color: #727171;
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+//领取框手风琴下拉菜单
+.accordion {
+  position: absolute;
+  border: 1px solid #000;
+  top: 132px;
+  padding: 0;
+  margin: 0;
+  height: 31px;
+  text-decoration: none;
+  list-style: none;
+  width: 218px;
+  background-color: #fff;
+  border: 1px solid #e5e5e8;
+  >li {
+    width: 218px;
+    margin-left: -1px;
+    border-left: 1px solid #e5e5e8;
+    border-right: 1px solid #e5e5e8;
+    .link {
+      line-height: 30px;
+      height: 30px;
+      cursor: pointer;
+      color: #999999;
+      font-size: 14px;
+      position: relative;
+      &.open{
+        color: #999999;
+        height: 28px;
+      }
+      p {
+        font-size: 12px !important;
+        margin-bottom: 0 !important;
+        padding-left: 5px;
+      }
+      span {
+        padding-left: 5px;
+      }
+    }
+  }
+  .submenu {
+    display: none;
+    background: #fff;
+    font-size: 14px;
+    li{
+      border-top: 1px solid #e5e5e8;
+      border-bottom: 1px solid #e5e5e8;
+      a{
+        display: block;
+        color: #d9d9d9;
+        height: 30px;
+        line-height: 30px;
+        padding-left: 5px;
+        &:hover{
+          background-color: #7e318e;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+.content-banner {
+  position: relative;
+  padding-top: 90px;
+  img {
+    height: 620px;
+  }
+}
+//swiper按钮样式
+.brand-swiper-button-prev, .star-swiper-button-prev, .report-swiper-button-prev{
+  background-image: url('../../images/brand-story/arrow_left.png');
+  width: 40px;
+  height: 40px;
+  background-size: 40px 40px;
+}
+.brand-swiper-button-next, .star-swiper-button-next, .report-swiper-button-next{
+  background-image: url('../../images/brand-story/arrow_right.png');
+  width: 40px;
+  height: 40px;
+  background-size: 40px 40px;
+}

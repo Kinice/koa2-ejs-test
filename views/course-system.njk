@@ -1,0 +1,155 @@
+{% extends 'layout.njk' %}
+{% block content %}
+{% block head_defalut %}
+{% endblock %}
+{% block head %}
+<link rel='stylesheet' href='/css/course-system.css'>
+{% endblock %}
+{% include "./common/header.njk" %}
+<div class="wrapper">
+    <div class="g-wrap contain-wrapper">
+    <div class="content-banner adult">
+      <img src="/images/course_system_banner.jpeg" alt="world_map">
+      <div class="form-box">
+        <form class="form-content">
+          <p>立即领取免费体验课</p>
+          <div class="name">
+            <input class="with-icon fl" id="adult-name" type="text" name="" value="" placeholder="姓名">
+            <div class="form-pic fl">
+              <img src="/images/adult-course/user_icon.png" alt="">
+            </div>
+          </div>
+          <div class="age">
+            <input class="with-icon fl" id="adult-age" type="text" name="" value="" placeholder="年龄">
+            <div class="form-pic pic-age fl">
+              <img src="/images/adult-course/user_icon.png" alt="">
+            </div>
+          </div>
+          <ul id="accordion" class="accordion">
+            <li>
+              <div class="link">
+                <span>选择校区</span>
+              </div>
+              <ul class="submenu">
+                <li>
+                  <div class="link">
+                    <p>The ONE国际钢琴艺术（北京校区）</p>
+                  </div>
+                  <ul class="submenu">
+                    <li>
+                      <a class="campus-item" value="1">月恒直营校区</a>
+                    </li>
+                    <li>
+                      <a class="campus-item" value="4">测试校区1</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <div class="link">
+                    <p>The ONE国际钢琴艺术（上海校区）</p>
+                  </div>
+                  <ul class="submenu">
+                    <li>
+                      <a class="campus-item" value="2">黄埔</a>
+                    </li>
+                    <li>
+                      <a class="campus-item" value="3">浦东</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <input id="adult-mobile" type="text" name="" value="" placeholder="请输入手机号">
+          <div class="captcha">
+            <input class="with-captcha" id="adult-captcha" width="100px" type="text" name="" value="" placeholder="请输入验证码">
+            <button id="get-captcha" type="button" onclick="getCode(this)">获取验证码</button>
+            <button id="reset-captcha" style="display:none;"><span id="time-captcha">60</span>秒后重发</button>
+          </div>
+          <button id="submit" type="button">点击领取</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="g-wrap content-wrapper">
+    <div class="content-div">
+      <div class="box-title tit-color">
+        <h1>专业的课程教学模式体系</h1>
+      </div>
+      <div class="map-pic">
+        <img src="images/course_system1.jpg" alt="world_map">
+      </div>
+    </div>
+  </div>
+  <div class="g-wrap content-wrapper">
+    <div class="content-div">
+      <div class="box-title tit-color">
+        <h1>培养九大核心技能</h1>
+      </div>
+      <div class="map-pic">
+        <img src="images/course_system2.jpg" alt="world_map">
+      </div>
+    </div>
+  </div>
+  <div class="g-wrap content-wrapper">
+    <div class="content-div">
+      <div class="box-title tit-color">
+        <h1>丰富的多元化课程</h1>
+      </div>
+      <div class="map-pic">
+        <img src="images/course_system3.jpg" alt="world_map">
+      </div>
+    </div>
+  </div>
+  <div class="g-wrap content-wrapper">
+    <div class="content-div">
+      <div class="box-title tit-color">
+        <h1>科学的教学闭环</h1>
+      </div>
+      <div class="map-pic">
+        <img src="images/course_system4.jpg" alt="world_map">
+      </div>
+    </div>
+  </div>
+  <div class="g-wrap reason">
+    <div class="content-div">
+      <div class="box-title">
+        <h1>专业的音乐启蒙</h1>
+      </div>
+      <div class="box-item full-img">
+        <div class="item fl">
+          <img src="/images/course_system_pre_1.png" alt="">
+          <div class="reason-mask">
+            <div class="bg">
+              <h3>音乐启蒙课</h3>
+              <p>音乐启蒙课音乐启蒙课音乐启蒙课音乐启蒙课音乐启蒙课音乐启蒙课音乐启蒙课音乐启蒙课音乐启蒙课音乐启蒙课音乐启蒙课</p>
+            </div>
+          </div>
+        </div>
+        <div class="item fl">
+          <img src="/images/course_system_pre_2.png" alt="">
+          <div class="reason-mask">
+            <div class="bg">
+              <h3>音乐启蒙课</h3>
+              <p>音乐启蒙课音乐启蒙课音乐启蒙课音乐启蒙课音乐启蒙课音乐启蒙课音乐启蒙课音乐启蒙课音乐启蒙课音乐启蒙课音乐启蒙课</p>
+            </div>
+          </div>
+        </div>
+        <div class="item fl">
+          <img src="/images/course_system_pre_1.png" alt="">
+          <div class="reason-mask">
+            <div class="bg">
+              <h3>音乐启蒙课</h3>
+              <p>音乐启蒙课音乐启蒙课音乐启蒙课音乐启蒙课音乐启蒙课音乐启蒙课音乐启蒙课音乐启蒙课音乐启蒙课音乐启蒙课音乐启蒙课</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% include "./common/fixed-bar.njk" %}
+{% endblock %}
+{% include "./common/footer.njk" %}
+</body>
+</html>

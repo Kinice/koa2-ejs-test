@@ -26,6 +26,20 @@ class School extends Table{
     super(school)
     this.school = school
   }
+
+  async getClassifiedSchools() {
+    try {
+      let schools = await this.school.findAll()
+      let generatedSchools = {}
+      for (let i in schools) {
+        if (!generatedSchools[schools[i].area]) generatedSchools[schools[i].area] = []
+        generatedSchools[schools[i].area].push(schools[i])
+      }
+      return generatedSchools
+    } catch (err) {
+      throw err
+    }
+  }
 }
 
 module.exports = School

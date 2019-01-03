@@ -1,9 +1,10 @@
 module.exports = {
   port: 12306,
+  origin: 'https://mc-dev.1tai.com',
   emailSender: {
     user: 'xxx@xxx.com',
     pass: 'xxxxxxx',
-    name: '发件人名名'
+    name: '发件人名'
   },
   database: {
     type: 'mysql',
@@ -13,5 +14,13 @@ module.exports = {
     password: '123456',
     prefix: 'front_',
     port: '3306'
+  },
+  redis: {
+    host: '127.0.0.1',
+    port: '6379'
+  },
+  sms: {
+    url: 'http://smscenter.xiaoyezi.com',
+    sms_path: '/api/qxt/send'
   }
 }

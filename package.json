@@ -8,7 +8,10 @@
   },
   "dependencies": {
     "ajv": "^6.6.2",
+    "axios": "^0.18.0",
     "debug": "^4.1.0",
+    "ioredis": "^4.3.0",
+    "k-article": "^0.2.1",
     "koa": "^2.6.2",
     "koa-bodyparser": "^4.2.1",
     "koa-convert": "^1.2.0",

@@ -26,7 +26,7 @@ onerror(app)
 app.use(bodyparser())
   .use(json())
   .use(logger())
-  .use(static(__dirname + '/public'))
+  .use(static(path.join(__dirname, '/public')))
   .use(views(path.join(__dirname, '/views'), {
     options: {settings: {views: path.join(__dirname, 'views')}},
     map: {'njk': 'nunjucks'},

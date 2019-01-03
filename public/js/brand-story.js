@@ -1,0 +1,2 @@
+"use strict";$(document).ready(function(){new Swiper(".brand-swiper-container",{direction:"horizontal",loop:!0,navigation:{nextEl:".brand-swiper-button-next",prevEl:".brand-swiper-button-prev"}}),new Swiper(".star-swiper-container",{direction:"horizontal",loop:!0,navigation:{nextEl:".star-swiper-button-next",prevEl:".star-swiper-button-prev"}}),new Swiper(".report-swiper-container",{direction:"horizontal",loop:!0,navigation:{nextEl:".report-swiper-button-next",prevEl:".report-swiper-button-prev"}})});
+//# sourceMappingURL=maps/brand-story.js.map

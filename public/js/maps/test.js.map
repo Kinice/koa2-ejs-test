@@ -1,1 +1,0 @@
-{"version":3,"sources":["test.js"],"names":["test","console","log"],"mappings":"aAAA,IAAMA,KAAO,OACbC,QAAQC,IAAIF","file":"../test.js","sourcesContent":["const test = 'test'\nconsole.log(test)\n"]}
