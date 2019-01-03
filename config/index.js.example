@@ -1,6 +1,6 @@
 module.exports = {
   port: 12306,
-  origin: 'https://mc-dev.1tai.com',
+  origin: 'https://localhost:3000',
   emailSender: {
     user: 'xxx@xxx.com',
     pass: 'xxxxxxx',
@@ -20,7 +20,7 @@ module.exports = {
     port: '6379'
   },
   sms: {
-    url: 'http://smscenter.xiaoyezi.com',
-    sms_path: '/api/qxt/send'
+    url: 'http://sms.1tai.com',
+    sms_path: '/send'
   }
 }
