@@ -3,6 +3,7 @@
 ### Development
 
 ```
-npm install
-npm run dev
+$ cp config/index.js.example config/index.js
+$ npm install
+$ npm run dev
 ```
